@@ -1,8 +1,8 @@
 {
   "private": true,
-  "name": "babel-express-starter",
-  "version": "1.0.0",
-  "description": "Babel, Express, starter project",
+  "name": "hue404",
+  "version": "1.1.0",
+  "description": "Node service to control hue lighting with various apis",
   "scripts": {
     "dev": "nodemon server.js",
     "lint": "eslint lib test",

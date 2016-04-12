@@ -1,40 +1,67 @@
-# Babel, Express, Starter
+# hue404
 
-This is a starter project for the Babel & Express combo featuring:
+Node service to control [Art404's](http://www.art404.com) hue lighting with various apis.
 
-  - `async / await` everywhere
-  - Designed for ease of unit-testing
-  - Service-based folder structure (each folder in `/lib` is a separate service, with its own `index.js`, `datastore.js` [if necessary], and a web `resource.js`) for easier navigation
-  - Configuration is done via environment variables that are required via `.env.example` see [dotenv-safe](https://github.com/rolodato/dotenv-safe) for more info.
-
-The `lib/github` service is here to serve as an example of how a service
-that has an http resource as well as non-trivial dependencies may be
-implemented and tested.
-
-Note: Minimum requirement is Node v4.2.0. Also, this may be a yeoman package in the future.
-
+Currently a mishmash of a true service + [hue-twitter](https://github.com/mannynotfound/hue-twitter). 
+Eventually hue-twitter will just be a recipe consume by this service.
 
 ## Usage
 
-Development:
-`npm run dev`
+Set up the environment variables listed in `env.example`
 
-Testing:
-`npm test`
+* DEV: `npm run dev`
+* NON-DEV: `node server`
 
-Check coverage:
-`npm run test-cover`
-`open coverage/lcov-report/index.html`
+## APIs
 
-Re-run tests when a file changes:
-`npm run test-watch`
+### Twiter
 
-Production:
-`npm install`
-`npm start`
+#### On
+`@username lights on`
 
+#### Off
+`@username lights off`
 
-## License
+#### Single Color
+`@username chartreuse`
 
-[MIT](/LICENSE)
+#### Multi Color
+`@username coral salmon papaya whip crimson`
+
+## Supported Colors:
+
+```js
+[
+  "white",
+  "red",
+  "green",
+  "blue",
+  "brown",
+  "chartreuse",
+  "chocolate",
+  "coral",
+  "cyan",
+  "fuschia",
+  "gold",
+  "hot pink",
+  "indigo",
+  "lime",
+  "magenta",
+  "navy",
+  "orchid",
+  "olive",
+  "orange",
+  "papaya whip",
+  "pink",
+  "plum",
+  "purple",
+  "salmon",
+  "teal",
+  "tomato",
+  "yellow"
+]
+```
+
+## TODO:
+* Break apart APIs into 'recipes' that can be developed independently
 
