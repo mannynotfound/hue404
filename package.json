@@ -25,6 +25,7 @@
     "huejay": "^1.1.0",
     "namespaced-console-logger": "^1.0.1",
     "request-promise": "^2.0.1",
+    "twilio": "^2.9.1",
     "twitter": "^1.2.5"
   },
   "engines": {
